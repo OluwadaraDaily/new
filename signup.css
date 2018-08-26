@@ -1,0 +1,58 @@
+body{
+	background-color: #34495e;
+	font-family: tahoma;
+}
+
+div{
+	text-align: center;
+}
+
+div h1{
+	color: white;
+}
+input {
+	border:0;
+	border: 3px solid #3498db;
+	padding: 12px 24px;
+	border-radius: 24px;
+	text-align: center;	
+	background: black;
+	color: white;
+	width: 150px;
+	transition: 0.50s
+}
+
+input:focus{
+	width:185px;
+	border:3px white solid;
+}
+
+#button{
+	border-color: #2ecc71;
+}
+
+#button:hover{
+	background-color: #2ecc71;
+	cursor: pointer;
+}
+
+input #float{
+	float: left;	
+}
+
+.personalInfo{
+	position: absolute;
+	background-color: black;
+	top:2%;
+	left: 35%;
+	padding: 8%;
+	width:300px; 
+}
+.loginInfo{
+	position: absolute;
+	background-color: black;
+	top: 90%;	
+	left: 35%;
+	padding: 8%;
+	width:300px;
+}

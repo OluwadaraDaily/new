@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>  Sign Up </title>
+
+		<link rel="stylesheet" type="text/css" href="signup.css">
+
+		<script type="text/javascript" src=""></script> 
+	</head>
+
+	<body>
+		<div class="personalInfo">
+			<h1> Personal Information </h1>
+			<form action="signup.php" method="post">
+				<p>
+					<input type="text" name="firstName" placeholder="First Name" required>
+				</p>
+
+				<p>
+					<input type="text" name="lastName" placeholder="Last Name" id="float" required>
+				</p>
+
+				<p>
+					<input type="text" name="email" placeholder="Email Address" required>
+				</p>
+
+				<p>
+					<input type="text" name="phoneNumber" placeholder="Phone Number" id="float" required>
+				</p>
+
+			</form>
+		</div>
+
+		<div class="loginInfo">
+			<h1> Login Information </h1>
+			<form>
+				<p>
+					<input type="text" name="username" placeholder="Username" required>
+				</p>
+
+				<p>
+					<input type="password" name="password" placeholder="Enter Password" required>
+				</p>
+
+				<p>
+					<input type="password" name="cpassword" placeholder="Re-enter Password" required>
+				</p>
+
+				<p>
+					<input id="button" type="submit" name="submit" value="Sign Up">
+				</p>				
+			</form>
+		</div>
+	</body> 
+</html>
+ 

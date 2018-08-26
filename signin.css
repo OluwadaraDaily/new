@@ -1,0 +1,69 @@
+/*Sign-in.css*/
+body{
+	background-color: #34495e;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+} 
+
+div{
+	background-color: #000;
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+div h1{
+	color: #fff;
+	text-transform: uppercase;
+}
+
+div input[type= "text"], div input[type= "password"]{
+	border:0;
+	display: block;
+	margin: 20px auto;
+	outline: none;
+	transition: 0.25s;
+	padding: 10px 24px;
+	background: none;
+	border-color: #fff;
+	border-radius: 24px;
+	color: #fff;
+	text-align: center;
+	border: 3px solid #3498db;
+	width: 160px;
+}
+
+div input[type= "text"]:focus, div input[type= "password"]:focus{
+	width:200px;
+	border-color: #2ecc71;
+}
+
+label{
+	font-family: tahoma, sans-serif;
+}
+
+
+
+#button{
+	border: 2px solid #3498db;
+	display: block;
+	margin: 20px auto;
+	outline: none;
+	transition: 0.25s;
+	padding: 10px 24px;
+	background: none;
+	border-radius: 24px;
+	color: #fff;
+	text-align: center;
+	border-color: #2ecc71;
+}
+#button:hover{
+	cursor: pointer;
+	background-color: #2ecc71;
+	color: black;
+}

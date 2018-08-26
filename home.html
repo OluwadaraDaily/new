@@ -1,0 +1,201 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>Homepage</title>
+		<style type="text/css">
+			body{
+				background-color: white;
+				font-family: Verdana, Sans-serif, Tahoma, cursive;
+				color: black;
+			}
+
+			#header{
+				text-align: center;
+				background-color: white;
+				border-bottom: 4px double black;
+				padding-bottom: 2%;
+			}
+
+			#frame1{
+				float: left;
+				margin-top: 2%;
+				margin-left: 5%;
+				border: 3px outset #700;
+				padding: 2%;
+				width: 30%;
+				max-height: 10em;
+				margin-left: 25%;
+				text-align: center;
+			}
+
+			.topics{
+				float: left;
+				margin-top: 2%;
+				margin-left: 5%;
+				border: 3px outset #700;
+				padding: 2%;
+				width: 30%;
+				max-height: 10em;
+				text-align: center;
+			}
+
+			ul li{      /* List item inside an unordered list*/
+				float:left;
+				border-right: 2px solid black;
+				border-bottom: 2px double black;	
+				list-style-type: none;
+				width: 8em;
+				margin-bottom: 2%;
+				background-color: #fefefe;	
+			}
+
+			li ul{   /*unordered list inside a list item */
+				display: none;
+				border-bottom:  1px solid black;
+			}
+
+			li:hover> ul{  /* a direct unordered list inside a list item to prevent newer generations from popping out */
+				display: block;
+			}
+
+			li a{  /* an achor tag inside a list item*/
+				text-decoration: none;
+			}
+
+			li a:hover{  /* when a cursor hovers over a link inside a list item  */
+				background-color: #3030ff;
+				padding-top: 10%;
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+
+			ol{
+				background-color: #ffccff;
+				border-right: 1px solid black;
+				width: 15%;
+				float: left;
+			}
+
+			ol li{
+				/* List items inside an ordered list. I created this becasue I already had an unordered list and I dont want this new list to have same properties as the unordered list I created before. I want to use this one to be on the left hand side. Practicing on relative positioning. */
+				position: relative;
+				width: 80%;
+				list-style-type: none;
+			}
+
+			p a{
+				/* Anchor tag inside a paragraph */
+				text-decoration: underline;
+				color: black;
+			}
+
+			p a:hover{	
+				color: blue;
+			}
+			p a:visited{
+				color: #700;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function myFunction(){
+				var die= Math.ceil(Math.random()*2);
+				var output= "";
+				switch(die){
+					case 1:
+					output="Heads, you win the toss!";
+					break;
+
+					case 2:
+					output="Tails. Try again and see if you'd win!";
+					break;
+					}
+				alert(output);
+			}
+		</script> 
+	</head>
+
+	<body>
+		<h1 id="header"> Oluwadara Daily </h1>
+		<div>
+			<div>
+				<p>
+					<h1>Wanna play a game?</h1>
+					<button id="Mydice" onclick="myFunction()"> Heads or Tails </button>
+				</p>
+			</div>
+
+			<ul>
+				<li> <a href="index.html"> Home </a> </li>
+
+				<li><a href="recent.html"> Recent </a>
+					<ul>
+						<li> <a href="15random.html"> 15 Random facts about me </a></li>
+						<li>The Sunday Word E07</li>
+						<li>The Sunday Word E06</li>
+						<li>B. H. S02 E07</li>
+						<li>Summer '18 </li>	
+					</ul>
+				</li>
+
+				<li><a href="lowread.html"> 5-10 min read </a></li>
+				<li><a href="shortstories.html"> Short Stories </a></li>
+				<li><a href="bhseries.html"> B.H. series </a></li>
+				<li><a href="archives.html"> Archives </a></li>
+				<li id="services"><a href="services.html"> Services </a></li>
+			</ul>
+		</div>
+
+		<br>
+
+		<div>
+			<form action="">
+				<input type="text" id="txtSearch" name=""> 
+				<input type="button" value="Search" name="">
+			</form>
+		</div>
+
+		<div id="left">
+			<ol>
+				<li>Menu</li>
+				<li>Settings</li>
+				<li>Overview</li>
+				<li>Games</li>
+				<li>News</li>
+				<li>Latest Prices</li>
+			</ol>
+		</div>
+
+		<div class="topics">
+			<img src="images/image1.jpg" alt="Holy Child Catholic Secondary School Logo">
+			<p>
+				<a href="holychild.html"> HOLY CHILD CATHOLIC SECONDARY SCHOOL, ADO-EKITI. </a> 
+			</p>
+		</div>
+
+		<div class="topics">
+			<img src="images/image2.jpg"  alt="Da 80 Trailblazers logo">
+
+			<p>
+				<a href="service.html">VALEDICTORY SERVICE, 2015 SET. </a>
+			</p>
+		</div>
+
+		<div id="frame1">
+			<img src="images/image3.png" alt="Capture 001">
+
+			<p>
+				<a href="gracitfoundation.org"> GRACIT FOUNDATION </a>
+			</p>
+		</div>
+
+		<div class="topics">
+			<img src="images/image4.png" alt="Eric Thomas">
+			<p>
+				<a href="ericthomas.com">TGIM: Thank God It's Monday </a>
+			</p>
+		</div>
+	</body> 
+</html>

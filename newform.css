@@ -1,0 +1,66 @@
+body{
+	background-color: #004;
+}
+div{
+	background-color: white;
+	border-radius: 24px;
+	color:black;
+	position: absolute;
+	top:25%;
+	left:25%;
+	width:50%;
+	text-align: center;
+}
+div h1{
+	color: #004;
+	font-family: tahoma;
+	text-align: center;
+}
+
+input{
+	padding: 1%;
+}
+
+#left1, #left2{
+	margin-left: 30%; 
+	float :left;
+	width:20%;
+	border:0;
+	border-bottom: 3px solid black;
+	transition: 0.35s;
+	border-radius: 14px;
+}
+
+#right1, #right2{
+	float:left;
+	clear: right;
+	margin-left: 2%;
+	width:20%;
+	border:0;
+	border-bottom: 3px solid black;
+	border-radius: 14px;
+	transition: 0.35s;
+}
+
+#left1:focus, #left2:focus, #right1:focus, #right2:focus {
+	width: 23%;
+	border-color: #800;
+}
+.bottom{
+	margin-top: 2%;
+}
+
+#button{
+	font-family: monospace;
+	font-weight: 30px;
+	margin-top: 4%;
+	text-align: center;
+	background: #000;
+	color: white;
+	padding: 2%;
+	border-radius: 24px;
+}
+
+#button:hover{
+	cursor: pointer;
+}

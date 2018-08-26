@@ -1,0 +1,254 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title> Dara's form</title>
+		<style type="text/css">
+			body {
+				background-color: #9090ff;
+				font: sans-serif, tahoma;
+			}
+
+			h1{
+				border: 2px #6060ff outset;
+			}
+			p{
+				font-family: "Comic sans MS", cursive, monospace, fantasy;
+				color: maroon;
+				font-size: small;
+			}
+			legend {
+				font-family: "treburchet MS", georgia;
+				font-size: larger;
+				color: #000;
+				font-weight: bolder;
+			}
+			h1{
+				background-position: center;
+				background-color: #700000;
+				font-family: tahoma;
+				text-align: center;
+				color: #9090ff;
+				font-size: xx-large;
+				font-weight: bolder;
+			}
+			a{
+				color: black;  
+				background-color: maroon; 
+			}
+			a:visited {    /* The rule is normal first, then visited and then, hover for the styles for any link */
+				color: red;
+				background-color: #9090c0;
+			}
+			a:hover{
+				color: #ffc060;
+				background-color: black;
+			}
+			label{ /* Hashtag (#) is used for IDs while period (.) is used for class while style to it on css */
+				font-weight: bolder;
+
+			}
+			input{
+				background-color: #ffffff;
+				border: 3px inset white;
+			}
+			em{
+				color: red;
+				font-style: normal;
+				font-family: tahoma;	
+			}
+		</style>
+
+		<script type="text/javascript">
+		function validate(){
+			// get inputs
+			name = document.getElementById("fstname").value;
+			email = document.getElementById("txtEmail").value;
+			phone = document.getElementById("phone").value;
+
+			//create an empty error message
+			errors = "";
+			//check name - It simply needs to exist
+			if (name == ""){
+				errors += "please supply a name \n";
+			} // end if
+
+			//check email
+			emailRE = /^.+@.+\..{2,4}$/;
+			if (email.match(emailRE)){
+				//console.log("email match");
+				//do nothing.
+				} 
+			else {
+				//console.log("email not a match");
+				errors += "please check email address \n";
+				} // end if
+
+				//check phone number
+			phoneRE = /^\(\d{3}\) *\d{3}-\d{4}$/;
+			if (phone.match(phoneRE)){
+				//console.log("phone matches");
+				//do nothing
+				} 
+			else {
+				//console.log("phone problem");
+				errors += "please check phone #\n";
+				} // end phone if
+
+				//check for errors
+			if (errors == ""){
+				alert ("now processing data");
+				//process the form
+				} 
+			else {
+				alert(errors);
+				} // end if
+				} // end function
+
+		function testPwd(){
+			//Checking for consistency in password
+			//passing the password fields as variables 
+			var pwd1= document.getElementById('pwd1');
+			var pwd2= document.getElementById('pwd2');
+
+			//Passing the values in the fields as variables
+			var pass1= pwd1.value;
+			var pass2=pwd2.value;
+			var warning="";
+			//Conditional statement
+			if(pass1==pass2){
+
+			}
+			else{
+				warning+="<em>Please re-enter your password!!! They don't match.<\/em>"
+			}
+
+			var error= document.getElementById('error');
+			error.innerHTML=warning;
+			}	
+		</script>
+
+	</head>
+
+	<body>
+
+		<h1> 
+			OLUWADARA DAILY
+		</h1>
+
+		<h3>
+			Registration Page
+		</h3>
+	
+		<form action = "">
+			<fieldset>
+				<legend>Personal Information</legend>
+
+				<p>
+					<label id="fstname" class="label">FIRST NAME</label> <!-- A simple text form to enter first name -->
+					<input type="text" id="txtFirstName" value="" placeholder="Enter First Name" size="15">
+				</p>
+
+				<p>
+					<label id="email" class="label">EMAIL ADDRESS</label>
+					<input type="text" id="txtEmail" value="" placeholder="daraoloye99@gmail.com"> <br> <!-- A text form for entering emails -->
+					<input type="checkbox" id="chkBroadcast" value="Broadcast" name="">  Recieve updates about this blog on your email <!-- A check box to make sure that they user wants to recieve blog updates -->
+				</p>
+
+				<p>
+					<label id="phone" class="label">PHONE NUMBER</label>
+					<input type="text" id="txtPhone" value="" placeholder="08101217017">
+				</p>				
+
+				<p>
+					<label id="nation" class="label"> NATIONALITY </label>
+					<input type="text" id="txtNation" value="" placeholder="Nigerian">
+				</p>
+
+				<p>
+					<label class="label">SOCIAL MEDIA ACCOUNTS</label> <br>  <!-- Making checkboxes for social media since multiple boxes canbe checked at once it gives the user ability to lcick on different social media accounts. I would also use javascript to make it bring out a form so that they can put in their details on each social media platform and be part of the database -->
+					<input type="checkbox" id="chkInsta" value="Instagram" name=""> Instagram <br>
+					<input type="checkbox" id="chkFacebook" value="Facebook"> Facebook <br>
+					<input type="checkbox" id="chkTwitter" value="Twitter" name="">	Twitter <br>
+					<input type="checkbox" id="chkTumblr" value="Tumblr" name=""> Tumblr <br>
+					<input type="checkbox" id="chkWhatsapp" value="Whatsapp" name=""> Whatsapp <br>
+					<input type="checkbox" id="chkSlack" value="Slack" name=""> Slack <br>
+				</p>
+
+				<p>
+					<label class="label"> TELL US A LITTLE ABOUT YOURSELF </label>
+				</p>
+
+				<p>
+					<textarea id="txtStory" rows="25" cols="50" maxlength="150" placeholder="Not more than 150 words."></textarea> <!-- A multi-line text input. The user can express him or herself. I might put in a size limit to make sure the user doesn't over use the space -->
+				</p>
+
+				<p>
+					<label class="label">SEX</label>
+				</p>
+
+				<p>
+					<input type="radio" id="male" name="radsex" value="male" checked="checked"> Male
+				</p>
+
+				<p>
+					<input type="radio" name="radsex" id="female" value="female" > Female
+				</p>
+
+				<p>
+					<input type="radio" name="radsex" id="other" value="other"> Other
+				</p>
+
+				<p>
+					<label class="label">DATE OF BIRTH</label>
+					<input type="date" id="txtDOB" value="" placeholder="DD/MM/YY">
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>Login information</legend>
+
+				<p>
+					<label class="label">USERNAME</label>
+					<input type="text" id="txtUsername" value="" placeholder="popovy1290">
+				</p>
+
+				<p>
+					<label class="label">PASSWORD</label>
+					<input type="password" id="pwd1" value="" placeholder="Enter password"> <!-- A password text field-->
+				</p>
+
+				<p>
+					<label class="label">RE-ENTER PASSWORD</label>
+					<input type="password" id="pwd2" value="" placeholder="Re-enter password"> <br>
+
+					<div id="error">
+						
+					</div>
+				</p>
+
+				<p>
+					<label class="label">SECURITY QUESTIONS</label>
+					<select id="selSecurity"> <!-- A dropdown menu list -->
+						<option>What is your middle name?</option>
+						<option>What is your pet's name?</option>
+						<option>What is your favourite cousin's name?</option>
+					</select>
+
+					<label class="label">ANSWER</label>
+					<input type="text" id="txtAnswer" value="" size="35" placeholder="Enter answer of secret question here">
+				</p>
+
+				<p>
+					<a href="table.html"> SIGN UP </a>
+				</p>
+
+				<p>
+				<button type="button" onclick="testPwd()"> SIGN UP</button>
+				<button onclick="validate()"> Validate </button>
+				</p>
+
+			</fieldset>
+		</form>
+	</body> 
+</html>
